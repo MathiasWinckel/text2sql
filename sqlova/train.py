@@ -545,7 +545,7 @@ if __name__ == '__main__':
     ## 2. Paths
     path_h = '.'
     path_wikisql = os.path.join(path_h, 'data', 'wikisql_tok')
-    BERT_PT_PATH = path_wikisql
+    BERT_PT_PATH = os.path.join( path_wikisql , bert_type)
 
     path_save_for_evaluation = './'
 
