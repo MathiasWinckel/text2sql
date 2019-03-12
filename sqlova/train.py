@@ -97,8 +97,8 @@ def construct_hyper_param(parser):
 def get_bert(BERT_PT_PATH, bert_type, do_lower_case, no_pretraining):
 
 
-    bert_config_file = os.path.join(BERT_PT_PATH, f'bert_config_{bert_type}.json')
-    vocab_file = os.path.join(BERT_PT_PATH, f'vocab_{bert_type}.txt')
+    bert_config_file = os.path.join(BERT_PT_PATH, f'bert_config.json') # _{bert_type}
+    vocab_file = os.path.join(BERT_PT_PATH, f'vocab.txt') # _{bert_type}
     init_checkpoint = os.path.join(BERT_PT_PATH, f'pytorch_model_{bert_type}.bin')
 
 
@@ -545,7 +545,7 @@ if __name__ == '__main__':
     ## 2. Paths
     path_h = '.'
     path_wikisql = os.path.join(path_h, 'data', 'wikisql_tok')
-    BERT_PT_PATH = os.path.join( path_wikisql , bert_type)
+    BERT_PT_PATH = os.path.join( path_wikisql , args.bert_type)
 
     path_save_for_evaluation = './'
 
