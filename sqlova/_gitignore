@@ -1,0 +1,4 @@
+/sqlova/**/*.pyc
+/wikisql/**/*.pyc
+.idea
+*.swp
